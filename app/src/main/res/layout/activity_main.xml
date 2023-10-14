@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="35dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Login"
+        android:textColor="#333333"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/input_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/inptext"
+        android:fontFamily="@font/poppins"
+        android:textColor="#333333"
+        android:paddingStart="20dp"
+        android:hint="Username"
+        android:textSize="15sp"
+        android:textAlignment="textStart" />
+
+    <EditText
+        android:id="@+id/input_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inptext"
+        android:fontFamily="@font/poppins"
+        android:textColor="#333333"
+        android:paddingStart="20dp"
+        android:hint="Password"
+        android:textSize="15sp"
+        android:textAlignment="textStart" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="By checking the box you agree to our Terms and Conditions."
+        android:textSize="11sp"/>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Login"
+        android:textColor="#FFE6BD41"/>
+
+
+</LinearLayout>

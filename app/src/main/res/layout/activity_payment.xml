@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".payment">
+
+
+    <!-- ======================BACK NAVIGATION================== -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/bckbutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="17dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Payment Method"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- ======================BACK NAVIGATION================== -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <!-- ======================Pick Data================== -->
+    <!--Judul-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#1e1e1e"
+
+        android:text="Pilih Bioskop"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="15sp"/>
+    <!--Judul-->
+
+    <!--Spin Tempat-->
+    <Spinner
+        android:id="@+id/spinTempat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:paddingStart="20dp"
+        android:background="@drawable/spinner_style"/>
+    <!--Spin Tempat-->
+
+    <!--Judul-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textColor="#1e1e1e"
+
+        android:text="Pilih Jenis Seat"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="15sp"/>
+    <!--Judul-->
+
+    <!--Spin Seat-->
+    <Spinner
+        android:id="@+id/spinSeat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:paddingStart="20dp"
+        android:background="@drawable/spinner_style"/>
+    <!--Spin Seat-->
+
+    <!--Judul-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+
+        android:text="Pilih Tanggal"
+        android:textColor="#1e1e1e"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="15sp"/>
+    <!--Judul-->
+
+    <!--Date Pick-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+            <DatePicker
+                android:id="@+id/pickdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:headerBackground="#011939" />
+    </LinearLayout>
+    <!--Date Pick-->
+
+    <!--Harga Atas-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/jenis_Seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Seat"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/temp_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35.000"
+            android:textSize="15sp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <!--Harga Atas-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#000000" />
+
+    <!--Harga Bawah-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/actual_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/sum_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35.000"
+            android:textSize="25sp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <!--Harga Bawah-->
+
+    <!--Pembayaran-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <!--Judul-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+
+            android:text="Add Payment Method"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_semibold"/>
+        <!--Judul-->
+
+        <!--Payment Method-->
+        <Spinner
+            android:id="@+id/metode_pembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/spinner_style" />
+        <!--Payment Method-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/method"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/spinner_style" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shapebtn2"
+
+            android:text="Account Number"
+            android:fontFamily="@font/poppins"
+            android:textColor="#777777"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+    <!--Pembayaran-->
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Get Recipt-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/get_Recipt"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#011939"
+
+            android:text="Order Summary"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#FFE6BD41"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Get Recipt-->
+    <!-- ======================Pick Data================== -->
+
+</LinearLayout>

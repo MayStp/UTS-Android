@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Recipt">
+
+
+    <!-- ======================BACK NAVIGATION================== -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/bckbutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="17dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Order Summary"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- ======================BACK NAVIGATION================== -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EFEFF0"
+            android:layout_marginBottom="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Section 1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <!--Gambar-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        app:cardCornerRadius="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ff3" />
+                    </androidx.cardview.widget.CardView>
+                    <!--Gambar-->
+
+                    <!--Judul-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Fast: Tokyo Drift"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="21sp"/>
+                        <TextView
+                            android:id="@+id/cinema"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Nama Bioskop"
+                            android:fontFamily="@font/poppins_semibold"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Studio 1"
+                            android:fontFamily="@font/poppins_semibold"/>
+                        <TextView
+                            android:id="@+id/tglDanWaktu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Tanggal, waktu"
+                            android:fontFamily="@font/poppins"/>
+
+                    </LinearLayout>
+                    <!--Judul-->
+
+
+
+                </LinearLayout>
+                <!--Section 1-->
+
+                <!--Section 2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Order Number"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="1198804794001625088"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/dataKursi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Seat"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/seat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Seat Type"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Payment Method"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/payment_method_choosed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Method Choosed"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/seat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Seat Type"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Rp 35.000"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Convenience Fee"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Rp 0"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <!--Section 2-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/black"/>
+
+                <!--Section 3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Actual Pay"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Rp 35.000"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="30sp"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+                <!--Section 3-->
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>
